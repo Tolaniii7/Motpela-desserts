@@ -1,14 +1,21 @@
+import { useDishContext } from "../context/DishContext";
 import { DishList } from "./DishList";
 import styles from './Dishes.module.css'
+import { Spinner } from "./Spinner";
 
-export function Dishes ({dishes, setCart,carts, addToCart}){
+export function Dishes (){
+     const {dishes, loading} = useDishContext();
+
     return(
     <div >
-        <header>Motpela Desserts</header> 
 
-        <ul className={styles.dishContainer}>
-            {dishes.map((dish)=>(<DishList dish ={dish} setCart={setCart} carts ={carts} addToCart={addToCart} />))}
-        </ul>
+        <div>
+            <h1 className={styles.header}>Motpela Desserts</h1> 
+        </div>
+
+       {loading ? <Spinner/> : <ul className={styles.dishContainer}>
+            {dishes.map((dish)=>(<DishList dish ={dish} />))}
+        </ul> }
     </div>
     )
 }

@@ -1,17 +1,17 @@
+import { useDishContext } from '../context/DishContext';
 import { OrderItem } from './OrderItem';
 import styles from './OrderModal.module.css';
 
 
-export  function OrderModal({ show, carts, setCart, close}) {
-  if (!show) return null;
+export  function OrderModal() {
+ const { showModal, carts, setCart, onClose, totalPrice} = useDishContext()
 
-   const totalPrice = carts.reduce((sum, item) => {
-     return sum + item.price * item.quantity ;
-    }, 0);
+
+  if (!showModal) return null;
 
     function startOrder(){
        
-        close()
+        onClose()
         setCart([]);
     }
 

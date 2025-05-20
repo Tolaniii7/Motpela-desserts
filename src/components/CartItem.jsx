@@ -1,16 +1,15 @@
 import styles from './CartItem.module.css'
-export function CartItem ({item, setCart, cart}){
-    const subTotal = item.quantity * item.price;
+import { useDishContext } from '../context/DishContext';
+export function CartItem ({item}){
 
-    const{category,quantity, price,name} = item;
-     function handleDelete(name){
-        setCart(cart=>cart.filter(item=> item.name !== name))
-    }
+     const { handleDelete} = useDishContext()
 
-    
-    
-    
+     const subTotal = item.quantity * item.price;
 
+     const{category,quantity, price,name} = item;
+
+   
+   
     return(
 
      <div>

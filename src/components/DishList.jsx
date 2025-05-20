@@ -1,7 +1,11 @@
+import { useDishContext } from '../context/DishContext';
 import styles from './DishList.module.css'
 
-export function DishList ({dish,setCart,carts, addToCart}){
-    const {image, name, price, category, quantity} = dish
+export function DishList ({dish}){
+
+  const { setCart,carts, addToCart} = useDishContext();
+
+    const {image, name, price, category} = dish
     const isInCart = carts.find(item => item.name === dish.name);
 
 

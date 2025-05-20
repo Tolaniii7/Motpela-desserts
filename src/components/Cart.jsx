@@ -1,28 +1,15 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import styles from './Cart.module.css'
 
 import { CartItem } from './CartItem'
 import { EmptyCart } from './EmptyCart'
 import { OrderModal } from './OrderModal';
+import {  useDishContext } from '../context/DishContext';
 
 
-export function Cart ({carts, setCart}){
+export function Cart (){
 
-      const [showModal, setShowModal] = useState(false)
-
-
-    const totalPrice = carts.reduce((sum, item) => {
-        return sum + item.price * item.quantity ;
-    }, 0);
-
-    function handleOrder (){
-        
-        setShowModal(true);
-    }
-
-    function onClose(){
-       setShowModal(false)
-    }
+    const {carts,totalPrice,handleOrder} = useDishContext()
 
 
     return(
@@ -36,7 +23,7 @@ export function Cart ({carts, setCart}){
             ) :
                  (
                     carts.map(item=> (
-                    <CartItem item={item} setCart={setCart} cart={carts} />
+                    <CartItem item={item}  />
                 ))
                 )}
              </div>
@@ -61,11 +48,8 @@ export function Cart ({carts, setCart}){
                    </div>
                    </>)
                  }
-                    <OrderModal  show={showModal} 
-                       close={onClose}
-                        carts ={carts}
-                        setCart={setCart}
-                    />
+
+                    <OrderModal  />
 
         </div>
     )
