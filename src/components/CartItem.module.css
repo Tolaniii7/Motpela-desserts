@@ -1,0 +1,46 @@
+@import '/assets/fonts/fonts.css';
+
+
+.itemName {
+    font-family: 'Red Hat Text', sans-serif ;
+    font-size: 1em;
+    font-weight: 700;
+    color:  hsl(14, 65%, 9%);
+    margin-top: 2em;
+}
+
+.quantity {
+    font-family: 'Red Hat Text', sans-serif ;
+    font-size: 1em;
+    font-weight: normal;
+    color:  hsl(14, 86%, 42%);
+}
+
+.price {
+    font-family: 'Red Hat Text', sans-serif ;
+    font-size: 1em;
+    font-weight: normal;
+    color:  hsl(14, 25%, 72%);
+}
+
+.subPrice {
+    font-family: 'Red Hat Text', sans-serif ;
+    font-size: 1em;
+    font-weight: normal;
+    color:  hsl(12, 20%, 44%);
+}
+
+.button {
+    color:hsl(7, 20%, 60%) ;
+
+}
+
+.itemDetails {
+    display: flex;
+    gap: 1em;
+}
+
+.itemInfo {
+    display: flex;
+    justify-content: space-between;
+}

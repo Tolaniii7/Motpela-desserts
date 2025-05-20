@@ -1,0 +1,79 @@
+@import '/assets/fonts/fonts.css';
+
+
+.cartContainer {
+    padding: 2em;
+     margin-top: 2em;
+
+}
+
+.cartHeader {
+    font-family: 'myFont2', Red Hat Text ;
+    font-size: 1.5em;
+    font-weight: 700;
+    color:  hsl(14, 86%, 42%);
+
+}
+
+.cartContent {
+  
+    margin-top: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid hsl(13, 31%, 94%);
+
+}
+
+
+.totalSummary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3em;
+
+}
+
+.totalPrice {
+   font-family: 'Red Hat Text', sans-serif;
+   font-size: 1.5em;
+   font-weight: bolder;
+   color:  hsl(14, 65%, 9%);
+}
+
+
+p{
+    color:  hsl(14, 65%, 9%);
+    font-size: 0.8em;
+}
+
+
+.confirmOrder{
+    font-family: 'Red Hat Text', sans-serif ;
+    font-size: 1em;
+    font-weight: 700;
+    background-color:  hsl(14, 86%, 42%);
+    color: white;
+    padding: 1em;
+    text-align: center;
+    margin-top: 2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delivery{
+     font-family: 'Red Hat Text', sans-serif;
+    font-size: 0.8em;
+    background-color: hsl(13, 31%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 0.5em;
+    margin-top: 2em;
+}
+
+@media (min-width: 800px) {
+    .cartContainer{
+        width: 40%;
+    }
+}

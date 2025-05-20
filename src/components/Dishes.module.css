@@ -1,0 +1,27 @@
+.dishContainer {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    color:  hsl(14, 65%, 9%);
+    margin-top: 2em;
+
+
+
+}
+
+@media only screen and (min-width: 800px) {
+    .dishContainer{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        
+    }
+}
