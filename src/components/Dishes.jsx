@@ -14,7 +14,7 @@ export function Dishes (){
         </div>
 
        {loading ? <Spinner/> : <ul className={styles.dishContainer}>
-            {dishes.map((dish)=>(<DishList dish ={dish} />))}
+            {dishes.map((dish)=>(<DishList dish ={dish} key={dish.name} />))}
         </ul> }
     </div>
     )

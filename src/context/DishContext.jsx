@@ -6,7 +6,6 @@ function DishProvider({children}){
 
      const [dishes, setDishes] = useState([])
      const [carts, setCart] = useState([])
-    const [showModal, setShowModal] = useState(false)
     const [loading,setLoading] = useState(true)
  
     useEffect(function(){
@@ -22,7 +21,7 @@ function DishProvider({children}){
                       setDishes(data)
                       setLoading(false)
                   }catch(err){
-              console.error('somethin wass wrong with connection', err.message)
+              console.error('something was wrong with connection', err.message)
             }
             }
       fetchDishes();
@@ -56,16 +55,6 @@ function DishProvider({children}){
         return sum + item.price * item.quantity ;
     }, 0);
 
-
-    function handleOrder (){
-        setShowModal(true);
-    }
-
-
-    function onClose(){
-       setShowModal(false)
-   }
-
     
     return <DishContext.Provider
     value={{
@@ -73,15 +62,10 @@ function DishProvider({children}){
         carts,
         setCart,
         setDishes,
-        addToCart,
-        showModal,
-        setShowModal,
-        handleOrder,
-        onClose,
+        addToCart, 
         totalPrice,
         handleDelete,
         loading,
-
     }}>
             {children}
         </DishContext.Provider>

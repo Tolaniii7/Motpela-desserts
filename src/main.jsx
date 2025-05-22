@@ -7,7 +7,9 @@ import { DishProvider } from './context/DishContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <DishProvider>
-    <App />
+      <App />
     </DishProvider>
-  </StrictMode>,
+  </StrictMode>
 )
+
+
