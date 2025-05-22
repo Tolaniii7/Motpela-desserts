@@ -1,10 +1,23 @@
 
 
 * {
-  margin: 0;
+ margin: 0;
   padding: 0;
   box-sizing: border-box;
   background-color: #FFFAF0;
+}
+ 
+
+.header {
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    color:  hsl(14, 65%, 9%);
+    padding: 1em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
 }
 
 
@@ -13,7 +26,7 @@
   top: 0;
   z-index: 1000; 
   text-align: right;
-  padding: 1em;
+  padding-right: 1em;
 
 }
 

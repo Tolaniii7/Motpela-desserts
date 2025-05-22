@@ -14,7 +14,6 @@ export  function OrderModal() {
     function startOrder(){ 
         navigate('/'); 
         setCart([]);
-        
     }
 
 
